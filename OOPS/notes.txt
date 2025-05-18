@@ -1,0 +1,89 @@
+date - 21 March 2025
+
+- main method in java is an entry point for execution and always executed first
+- public static void main(String() args) {}
+
+public: It allows the JVM to access the method from outside the class.
+
+static: It means that the method can be called without creating an instance of the class. The JVM does not instantiate the class to call this method.
+
+void: This indicates that the method does not return any value.
+
+String[] args: This parameter allows passing command-line arguments to your program
+
+--------
+- Initializing Objects 3 ways
+- 1. By reference variables - s1.id = 101
+- 2. By methods - void insertRecord(int i, String n)
+- 3. By Initializing through constructor - constructor method called when obj created with new keyword
+    The constructor is automatically invoked upon object instantiation, guaranteeing correct initialization of the object prior to usage.
+
+    
+- objects get memory in the heap memory area
+- reference variables are in the stack memory
+
+-----------
+
+Inheritance :
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+It is usefull for: Method Overiding, Code reusability
+
+types: single, multilevel, heirarchical
+
+Interfaces support: mutiple and hybrid
+// if you do multiple inheri with classes it will throw error 
+
+------------
+Polymorphism:
+Types:
+- Compile Time - method Overloading at compile time
+- Run Time - aka dynamic method dispatch where call to overriden method is resolved at run-time
+
+Upcasting - 
+class A{}
+class B extends A{}
+A a = new B(); 
+here the reference variable of parent class refers to the object of child class.
+ The JVM determines which method to call based on the actual object type at runtime.
+In upcasting, only the reference type's members are accessible, unless overridden instance methods are present, which are resolved at runtime due to dynamic method dispatch. 
+Static methods do not follow dynamic method dispatch, so even if they appear overridden, they are resolved at compile-time based on the reference type, not the object type.
+
+
+----------
+22 March 2025
+Abstraction - hiding the implementation details and showing only the functionality to the user
+            - focus on what object does instead of how it does.
+Abstract classes : cannot be instantiated directly, they serve as bluprint for other classes and must be extended to be used
+abstract keyword - to declare an abstract class
+abstract method : does not have implementation is known as an abstract method. ie no method body 
+non-abstract methods (concrete methods): defined behaviour. subclass inherits this
+
+Abstraction achieved by 2 ways : Abstract class and Interfaces
+
+Abstract class: partially implemented class, has abstract and non-abstract methods, cannot be instantiated, can have constrcutors and static methods, 
+
+abstract class can have main method inside it.
+
+We can extend only one abstract class. (single inheritance)
+
+In Java, an abstract class can contain static methods, which can be called without creating an instance of the class. Static methods belong to the class itself 
+rather than to any specific object instance, allowing them to be invoked using the class name.
+className.staticMethod();
+----------------------
+Interface: it is a collection of abstract methods that must be implemented by the class that chooses to use it ("implements" keyword)
+- 100% Abstraction
+- cannot have instance variables
+- supports multiple inheritance
+- all methods are public and abstract by default
+- when to use? - when we want to enforce behaviour accros unrelated classes
+- Since java 8, interface can have default methods, static, 
+
+--------
+Encapsulation: wrapping code and data together into single unit
+Java Bean class is an exmaple of fully encapsulated class
+public setter and getter methods - read-only or write-only
+- Achieves data hiding
+- Better for unit testing
+
+
+

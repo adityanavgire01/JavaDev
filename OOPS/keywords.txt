@@ -1,0 +1,18 @@
+- instance variables
+- reference variables
+- static methods - ind of objects, cannot be overriden but can hide other static methods from the superclass.
+                 - In Java, static methods belong to the class, not instances. They are resolved at compile-time based on the reference type.
+
+- instance method - dep on objects, In Java, instance methods are resolved dynamically (runtime polymorphism).
+                  - The method call is determined by the actual object's type, not the reference type.
+                  - Dynamic method dispatch/invocation
+  
+- Overiding-
+- Overloading
+- constructor
+- Abstract method
+- Concrete method
+- Inheritance
+- Polymorphism
+
+
