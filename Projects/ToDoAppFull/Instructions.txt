@@ -1,0 +1,2 @@
+- Compile all files: javac *.java
+- Execute: java TodoApp
